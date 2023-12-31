@@ -31,7 +31,7 @@ input_container = st.container()
 output_container = st.container()
 ic1,ic2,ic3=input_container.columns(3)
 with ic1:
-    FA=st.number_input("**Total floor area [m^{2}]:**",min_value=100.0,max_value=300.0,step=10.0,value=150.0)
+    FA=st.number_input("**Total floor area [m²]:**",min_value=100.0,max_value=300.0,step=10.0,value=150.0)
     AR=st.number_input("**Aspect ratio:**",min_value=0.1,max_value=1.0,step=0.05,value=0.25)
     CH=st.number_input("**Ceiling height [m]**", min_value=2.0, max_value=5.0, step=0.25, value=3.0)
     WA=st.number_input("**External wall insulation (U value):**", min_value=0.2, max_value=3.0, step=0.1, value=0.3)
@@ -42,7 +42,7 @@ with ic2:
     WWRS=st.number_input("**WWR south faced [%]**", min_value=10.0, max_value=90.0, value=10.0, step=10.0)
 with ic3:
     SH=st.number_input("**Horizontal shading overhang [m]:**", min_value=0.0, max_value=5.0, step=0.1, value=4.0)
-    OR_=st.number_input("**Building orientation [^o]:**", min_value=0.0, max_value=360.0, step=10.0, value=90.0)
+    OR_=st.number_input("**Building orientation [º]:**", min_value=0.0, max_value=360.0, step=10.0, value=90.0)
 
 new_sample=np.array([[FA, AR, CH, WA, RO, WI, WWRN, WWRS, SH, OR_]],dtype=object)
 for c in contaminations:
