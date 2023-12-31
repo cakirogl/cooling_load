@@ -31,9 +31,9 @@ input_container = st.container()
 output_container = st.container()
 ic1,ic2,ic3=input_container.columns(3)
 with ic1:
-    FA=st.number_input("**Total floor area [m^2]:**",min_value=100,max_value=300,step=10,value=150)
+    FA=st.number_input("**Total floor area [m^2]:**",min_value=100.0,max_value=300.0,step=10.0,value=150.0)
     AR=st.number_input("**Aspect ratio:**",min_value=0.1,max_value=1.0,step=0.05,value=0.25)
-    CH=st.number_input("**Ceiling height [m]**", min_value=2, max_value=5, step=0.25, value=3.0)
+    CH=st.number_input("**Ceiling height [m]**", min_value=2.0, max_value=5.0, step=0.25, value=3.0)
     WA=st.number_input("**External wall insulation (U value) **", min_value=0.2, max_value=3.0, step=0.1, value=0.3)
 with ic2:
     RO=st.number_input("**Roof insulation (U value):**", min_value=0.2, max_value=3.0, step=0.1, value=0.3)
